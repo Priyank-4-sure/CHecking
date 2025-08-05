@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="anim">
+<p style="font-size: 1.2rem;padding-left:3vw;margin-top:2rem;">In Mobiles:-</p>
+<div class="listt">
+  <!-- {% for product in products %}
+  <div class="product-card">
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <h3>{{ product.name }}</h3>
+    <p class="price">₹{{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <a href="{% url 'order' product.id %}" class="buy-btn">Order Now</a>
+  </div>
+  {% endfor %} -->
+  <div class="card">
+    <img src="{% static 'media\products\oppo.png' %}"/>
+    <p>Starting from 9499/-</p>
+  </div>
+  <div class="card">
+    <img src="{% static 'media\products\realme.png' %}"/>
+    <p>Starting from 12999/-</p>
+  </div>
+  <div class="card">
+    <img src="{% static 'media\products\oneplus.png' %}"/>
+    <p>Starting from 19999/-</p>
+  </div>
+  <div class="card">
+    <img src="{% static 'media\products\nothing.png' %}"/>
+    <p>Starting from 16999/-</p>
+  </div>
+  <div class="card">
+    <img src="{% static 'media\products\redmi.png' %}"/>
+    <p>Starting from 7999/-</p>
+  </div>
+  <div class="card">
+    <img src="{% static 'media\products\vivo.png' %}"/>
+    <p>Starting from 12999/-</p>
+  </div>
+</div>
+<p style="font-size: 1.2rem;padding-left:3vw;margin-top:2rem;">Common Ascessories:-</p>
+<div class="listt">
+  <div class="card" style="background-color: beige; padding: 1vw;min-width:200px;">
+    <p style="font-weight: bold;">Charging Cable and Adapter</p>
+    <p>All types(C type, Micro USB, Iphone, M600) are available.</p>
+  </div>
+  <div class="card" style="background-color: beige; padding: 1vw;min-width:200px;">
+    <p style="font-weight: bold;">Headphones</p>
+    <p>Both wireless(neckband,earpods and headphones) and wired earphones are available.</p>
+  </div>
+  <div class="card" style="background-color: beige; padding: 1vw;min-width:200px;">
+    <p style="font-weight: bold;">Storage Devices and Battery</p>
+    <p>Memory Cards, Pen Drives, Power Banks of multiple variations are available.</p>
+  </div>
+  <div class="card" style="background-color: beige; padding: 1vw;min-width:200px;">
+    <p style="font-weight: bold;">Connectors</p>
+    <p>C to B, B to C, all types OTG, 3.5mm Jack to all types are available.</p>
+  </div>
+  <div class="card" style="background-color: beige; padding: 1vw;min-width:200px;">
+    <p style="font-weight: bold;">Others</p>
+    <p>Explore more products like tripod, selfie stick, mic, mouse, keyboard and even more in our store.</p>
+  </div>
+</div>
+</div>
+{% endblock %}

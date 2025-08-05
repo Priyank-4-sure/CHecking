@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Store</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="header">
+    <img src="{% static 'media\products\logo.png' %}" class="fit"/>
+    <a href="/home" class="link">Home</a>
+    <a href="/products" class="link">Products</a>
+    <a href="/location" class="link">Location</a>
+    <!-- <a href="/signup" style="margin-left:auto;" class="link">Sign in</a> -->
+  </div>
+  {% block content %}{% endblock %}
+</body>
+</html>

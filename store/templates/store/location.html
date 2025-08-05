@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Siddhi Vinayak Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Hsx2e5yqledC3pUfaHA9yIkZg3EPh2A&callback=initMap" async defer></script>
+    <script>
+    function toggleDropdown() {
+        var dropdown = document.querySelector('.dropdown');
+        dropdown.classList.toggle('active');
+    }
+      function initMap() {
+        var location = {lat: 22.406468671614128,  lng: 84.73171312599396}; // Latitude and Longitude, 
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    <main>
+        <div class="content">   
+            <h3>Our location on Google Maps</h3>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>

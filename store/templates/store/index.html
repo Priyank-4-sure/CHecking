@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="content">   
+    <p style="font-size: 1.5em;margin:3vw 0 3vw 0">Welcome to Sri Siddhi Vinayak Services!</p>
+    <p style="font-size: 0.75em;">Providing the best mobile-related services for you since 20+ years in Birmitrapur, Odisha.</p>
+    <div class="slide">
+        <p style="justify-self: start; margin-left:1vw;">Our Store:-</p>
+        <div class="slider">
+            <img src="{% static 'media\products\Img0.jpg' %}"/>
+            <img src="{% static 'media\products\Img1.jpg'%}"/>
+            <img src="{% static 'media\products\IMG20241214124516.jpg'%}"/>
+            <img src="{% static 'media\products\Img3.jpg'%}"/>
+        </div>
+    </div>
+    <p style="justify-self: start; margin-left:1vw;">Explore more in other links:-</p>
+    <div class="links">
+        <a href="/products" class="linked">Products</a>
+        <a href="/location" class="linked" style="justify-self:end;">Location</a>
+    </div>
+</div>
+{%endblock%}
